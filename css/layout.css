@@ -1,0 +1,179 @@
+/* =================================================================
+   LAYOUT STYLES
+================================================================= */
+
+/* --- Header Layout --- */
+header {
+   width: 100%;
+   height: 7vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 5rem;
+   background-color: rgba(255, 255, 255, 0.8);
+}
+nav .header-menus {
+   display: flex;
+   gap: 2rem;
+}
+.header-icons {
+   display: flex;
+   gap: 2rem;
+}
+
+/* --- Main Layout --- */
+main {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   position: relative;
+}
+.main-container {
+   width: 100%;
+   height: 100%;
+}
+.main-bg-text {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+}
+.main-slider-container {
+   width: 100%;
+   height: 100%;
+}
+.main-slider {
+   width: 100%;
+   height: 100%;
+}
+
+/* --- Section Containers Layout --- */
+.category-container {
+   width: 100%;
+   max-width: 1600px;
+   height: 100%;
+   padding: 10rem 5rem;
+   margin: 0 auto;
+}
+.new-arrivals-container {
+   width: 100%;
+   max-width: 1600px;
+   height: 100%;
+   padding: 5rem 5rem;
+   margin: 0 auto;
+}
+.brand-container {
+   width: 100%;
+   min-height: 80vh;
+   padding: 5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   max-width: 1600px;
+   overflow: hidden;
+   flex-direction: column;
+}
+.welcome-container {
+   width: 100%;
+   min-height: 70vh;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+.trend-pick-container {
+   width: 100%;
+   max-width: 1600px;
+   height: 100%;
+   padding: 5rem 5rem;
+   margin: 0 auto;
+}
+.review-container {
+   width: 100%;
+   min-height: 50vh;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+/* --- Grid & Flex Layouts within Sections --- */
+.category-grid-content {
+   width: 100%;
+   max-width: 1600px;
+   display: grid;
+   align-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 2rem;
+}
+.new-arrivals-grid {
+   width: 100%;
+   max-width: 1600px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 3rem;
+}
+
+.brand-flex-content {
+   display: flex;
+   width: 100%;
+   height: 60vh;
+   gap: 1rem;
+}
+.welcome-content {
+   position: relative;
+   z-index: 2;
+   width: 90%;
+   max-width: 600px;
+   padding: 4rem;
+   border-radius: 1rem;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   text-align: center;
+   color: #fff;
+   background-color: rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+}
+.trend-pick-grid {
+   width: 100%;
+   max-width: 1600px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 3rem;
+}
+.review-content {
+   position: relative;
+   z-index: 2;
+   width: 90%;
+   max-width: 650px;
+   padding: 4rem;
+   text-align: center;
+   color: #fff;
+}
+
+/* --- Footer Layout --- */
+/* Footer */
+/* Footer END */
+
+/* --- Layout Responsive --- */
+@media (max-width: 768px) {
+   nav .header-menus {
+      display: none;
+   }
+   .icon-login,
+   .icon-favorite {
+      display: none;
+   }
+   .m-btn {
+      display: block;
+   }
+}

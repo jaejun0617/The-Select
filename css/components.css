@@ -1,0 +1,250 @@
+/* =================================================================
+   COMPONENTS STYLES
+================================================================= */
+
+/* --- Header Components --- */
+.logo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+nav .header-menus li a {
+   padding: 0 2rem;
+   font-size: 1.4rem;
+   display: block;
+   font-weight: 400;
+   color: #000;
+   transition: transform 0.3s ease-in-out;
+}
+nav .header-menus li a:hover,
+.icon:hover {
+   transform: scale(1.2);
+}
+.icon {
+   transition: transform 0.3s ease-in-out;
+   cursor: pointer;
+}
+.m-btn {
+   display: none;
+   transition: transform opacity 0.3s ease 0.3s;
+}
+
+/* --- Main Slider Image Component --- */
+.main-slider img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+/* --- Category Card Component --- */
+.category {
+   cursor: pointer;
+   overflow: hidden;
+   border-radius: 2.7rem;
+}
+.category img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   transition: transform 0.5s ease-in-out;
+}
+.category:hover img {
+   transform: scale(1.2);
+}
+
+/* --- Product Card Component --- */
+.product-card {
+   animation: fadeIn 0.5s ease forwards;
+}
+.product-image {
+   overflow: hidden;
+}
+.product-image img {
+   width: 100%;
+   height: 285px;
+   object-fit: cover;
+   display: block;
+   transition: transform 0.5s ease-in-out;
+}
+.product-image:hover img {
+   transform: scale(1.2);
+}
+.product-info {
+   line-height: 1.5;
+}
+.product-brand {
+   font-size: 1.3rem;
+   color: #888;
+   font-weight: 500;
+}
+.product-name {
+   font-size: 1.6rem;
+   font-weight: 500;
+   margin: 0.5rem 0;
+}
+.product-price {
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+
+/* --- Brand Gallery Component --- */
+.brand-gallery {
+   flex: 1;
+   border-radius: 1rem;
+   overflow: hidden;
+   position: relative;
+   transition: flex 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+   cursor: pointer;
+}
+.brand-gallery:hover {
+   flex: 9;
+}
+.brand-gallery:hover .brand-gallery-text {
+   opacity: 1;
+   transition-delay: 0.3s;
+}
+.brand-gallery img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   display: block;
+   transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.brand-gallery:hover img {
+   transform: scale(1.1);
+}
+.brand-gallery-text p {
+   font-size: 1.5rem;
+   line-height: 1.6;
+   opacity: 0.9;
+}
+
+.season-highlight {
+   display: block;
+   margin-top: 1rem;
+   font-size: 1.5rem;
+   font-weight: 500;
+   color: #fff;
+   letter-spacing: 0.5px;
+}
+
+.shop-brand-btn {
+   display: inline-block;
+   margin-top: 2rem;
+   padding: 0.8rem 1.5rem;
+   border: 1px solid rgba(255, 255, 255, 0.8);
+   border-radius: 20px;
+   font-size: 1.4rem;
+   font-weight: 500;
+}
+
+.shop-brand-btn:hover {
+   background-color: #000;
+   color: #fff;
+}
+
+/* --- Parallax Background Component --- */
+.welcome-bg {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   background-image: url('../assets/images/Main/cupon/coupon.png');
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: brightness(0.8);
+}
+.review-bg {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   background-image: url('../assets/images/Main/cupon/banner_review.png');
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: brightness(0.8);
+}
+
+/* --- Icon Component --- */
+.welcome-icon {
+   margin-bottom: 2rem;
+}
+.welcome-icon img {
+   width: 24px;
+   height: 24px;
+}
+
+/* --- Button Components --- */
+.view-more-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   padding: 1.5rem 3rem;
+   width: 100%;
+   max-width: 200px;
+   margin: 0 auto;
+   margin-top: 5rem;
+   border: 1px solid #000;
+   transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+   color: #000;
+}
+.view-more-wrapper:hover {
+   background-color: #000;
+   color: #fff;
+}
+.view-more-wrapper button {
+   border: none;
+   background: none;
+   color: inherit;
+   font-size: 1.6rem;
+   font-weight: 500;
+   width: 100%;
+   padding: 0;
+   cursor: pointer;
+}
+
+.cta-button {
+   display: inline-block;
+   background-color: rgba(255, 255, 255, 0.9);
+   color: #111;
+   padding: 1.5rem 3rem;
+   border-radius: 5px;
+   font-weight: 700;
+   text-decoration: none;
+   transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+   font-size: 1.6rem;
+}
+.cta-button:hover {
+   transform: scale(1.05);
+   background-color: #fff;
+}
+
+/* New Arrivals &  Trend Pick  Grid  */
+.toggle-grid {
+   display: grid;
+
+   overflow: hidden;
+   max-height: 700px;
+   transition: max-height 0.7s ease-in-out;
+}
+
+.toggle-grid.expanded {
+   max-height: 5000px;
+}

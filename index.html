@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- 브라우저 기본 스타일 초기화 -->
+      <link rel="stylesheet" href="./css/reset.css" />
+      <!-- CSS 변수 -->
+      <link rel="stylesheet" href="./css/variables.css" />
+      <!-- 공통 스타일(body, h1~h6, p, 헤더/푸터 등 전역 적용 + 클래스별 스타) -->
+      <link rel="stylesheet" href="./css/common.css" />
+      <!-- 레이아웃 관련 스타일-->
+      <link rel="stylesheet" href="./css/layout.css" />
+      <!-- 카드 버튼 모달 등 UI 컴포넌트 스타일 -->
+      <link rel="stylesheet" href="./css/components.css" />
+      <!-- GSAP 라이브러리 추가 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+      <title>THE SELECT</title>
+   </head>
+   <body>
+      <!-- 전체 컨테이너 -->
+      <div class="container">
+         <!-- =================================================================
+         1. Header
+         ================================================================== -->
+         <header>
+            <!-- Logo -->
+            <div class="logo">
+               <a href="#">
+                  <img src="./assets/images/Main/logo/fff_logo.png" alt="THE SELECT 로고" />
+               </a>
+            </div>
+            <!-- Navigation -->
+            <nav>
+               <ul class="header-menus">
+                  <li><a href="./product-list.html">BRAND</a></li>
+                  <li><a href="#">WOMAN</a></li>
+                  <li><a href="#">MAN</a></li>
+                  <li><a href="#">BAG</a></li>
+                  <li><a href="#">ACC</a></li>
+                  <li><a href="#">SHOES</a></li>
+               </ul>
+            </nav>
+            <!-- Header icons  -->
+            <div class="header-icons">
+               <div class="icon icon-search">
+                  <img src="./assets/icons/search.svg" alt="검색" />
+               </div>
+               <div class="icon icon-login">
+                  <a href="./login.html">
+                     <img src="./assets/icons/lock.svg" alt="로그인" />
+                  </a>
+               </div>
+               <div class="icon icon-favorite">
+                  <img src="./assets/icons/favorite.svg" alt="찜하기" />
+               </div>
+               <div class="icon icon-cart">
+                  <a href="./cart.html">
+                     <img src="./assets/icons/cart.svg" alt="장바구니" />
+                  </a>
+               </div>
+               <div class="icon m-btn">
+                  <img src="./assets/icons/menubar.svg" alt="메뉴 열기" />
+               </div>
+            </div>
+         </header>
+
+         <!-- =================================================================
+         2. Main Slider Container
+         ================================================================== -->
+         <main>
+            <div class="main-container">
+               <div class="main-bg-text">
+                  <div class="section-title">
+                     <h2>코트의 계절</h2>
+                     <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, dicta numquam? Velit, eum?
+                        Itaque recusandae corporis debitis eligendi ipsam a pariatur aut quasi maxime fuga, iste ex enim
+                        magni ad!
+                     </p>
+                  </div>
+                  <div class="main-brand">
+                     <h2>Max Mara</h2>
+                  </div>
+               </div>
+               <div class="main-slider-container">
+                  <div class="main-slider">
+                     <img src="./assets/images/Main/Main-slider/banner_visual_maxmara.png" alt="막스마라 메인 배너" />
+                  </div>
+               </div>
+            </div>
+         </main>
+
+         <!-- =================================================================
+         3. Category Container 
+         ================================================================== -->
+         <section class="category-container">
+            <div class="section-title">
+               <h2>Complete Your Style</h2>
+               <p>머리부터 발끝까지, 당신의 스타일을 완성할 마지막 조각을 발견하세요.</p>
+            </div>
+            <div class="category-grid-content">
+               <div class="category clothing">
+                  <img src="./assets/images/Main/Category/category_woman_hover.png" alt="여성 옷" />
+               </div>
+               <div class="category clothing">
+                  <img src="./assets/images/Main/Category/category_man_hover.png" alt="남성 옷" />
+               </div>
+               <div class="category bags">
+                  <img src="./assets/images/Main/Category/category_bag_hover.png" alt="카테고리 가방" />
+               </div>
+               <div class="category shoes">
+                  <img src="./assets/images/Main/Category/category_shoes_hover.jpeg" alt="카테고리 신발" />
+               </div>
+               <div class="category acc">
+                  <img src="./assets/images/Main/Category/category_acc_hover.png" alt="카테고리 액세서리" />
+               </div>
+            </div>
+         </section>
+
+         <!-- =================================================================
+         4. New Arrivals Container
+         ================================================================== -->
+         <section class="new-arrivals-container">
+            <div class="section-title">
+               <h2>New arrivals</h2>
+               <p>가장 먼저 만나는 새로운 시즌의 아이템</p>
+            </div>
+            <div class="new-arrivals-grid toggle-grid">
+               <!-- JavaScript가 이곳을 채웁니다. -->
+            </div>
+            <div class="view-more-wrapper">
+               <button type="button" id="new-arrivals-btn" class="view-more-btn" disabled>View More</button>
+            </div>
+         </section>
+
+         <!-- =================================================================
+         5. Welcome (쿠폰) 
+         ================================================================== -->
+         <section class="welcome-container">
+            <div class="welcome-bg"></div>
+            <div class="welcome-content">
+               <div class="welcome-icon">
+                  <img src="./assets/icons/giftbox.png" alt="선물 상자 아이콘" />
+               </div>
+               <h2 class="welcome-title">First Purchase 15% OFF</h2>
+               <p class="welcome-subtitle">
+                  THE SELECT의 회원이 되어주시는 모든 분들께<br />
+                  첫 구매 시 사용 가능한 15% 할인 쿠폰을 드립니다.
+               </p>
+               <div class="welcome-cta-wrapper">
+                  <a href="/signup.html" class="cta-button">SIGN UP & GET COUPON</a>
+               </div>
+            </div>
+         </section>
+
+         <!-- =================================================================
+         6. Brands Container 
+         ================================================================== -->
+         <section class="brand-container">
+            <div class="section-title">
+               <h2 class="text-center">Our Curated Brands</h2>
+               <p>시대를 초월하는 가치와 동시대적 트렌드를 이끄는 브랜드를 만나보세요.</p>
+            </div>
+            <div class="brand-flex-content">
+               <!-- CHANEL -->
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/CHANEL.png" alt="샤넬" />
+                  <div class="brand-gallery-text">
+                     <h2>CHANEL</h2>
+                     <p>
+                        꿈과 감성, 변치 않는 클래식의 아이콘<br />
+                        <span class="season-highlight">#Tweed #Balletcore #SS24_HauteCouture</span>
+                     </p>
+                  </div>
+               </div>
+
+               <!-- BOTTEGA VENETA -->
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/BOTTECG VENETA.png" alt="보테가 베네타" />
+                  <div class="brand-gallery-text">
+                     <h2>BOTTEGA VENETA</h2>
+                     <p>
+                        럭셔리의 새로운 정의, 일상으로 스며든 장인정신<br />
+                        <span class="season-highlight">#Intrecciato #QuietLuxury #MatthieuBlazy</span>
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Miu Miu -->
+
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/Miu Miu .png" alt="미우미우" />
+                  <div class="brand-gallery-text">
+                     <h2>Miu Miu</h2>
+                     <p>
+                        가장 반항적이고 사랑스러운 소녀의 옷장<br />
+                        <span class="season-highlight">#MiuMiuClub #GeekChic #Preppy</span>
+                     </p>
+                  </div>
+               </div>
+
+               <!-- SAINT LAURENT -->
+
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/SAINT LAURENT.png" alt="생로랑" />
+                  <div class="brand-gallery-text">
+                     <h2>SAINT LAURENT</h2>
+                     <p>
+                        절제된 무드 속 치명적인 관능미<br />
+                        <span class="season-highlight">#LeSmoking #SharpTailoring #Effortless</span>
+                     </p>
+                  </div>
+               </div>
+
+               <!-- BALENCIAGA -->
+
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/BALENCIAGA.png" alt="발렌시아가" />
+                  <div class="brand-gallery-text">
+                     <h2>BALENCIAGA</h2>
+                     <p>
+                        평범함을 거부하는 대담한 실루엣의 미학<br />
+                        <span class="season-highlight">#Demna #StreetCouture #Oversized</span>
+                     </p>
+                  </div>
+               </div>
+
+               <!-- GUCCI -->
+
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/CUCCI.png" alt="구찌" />
+                  <div class="brand-gallery-text">
+                     <h2>GUCCI</h2>
+                     <p>
+                        과거와 미래가 공존하는 가장 현대적인 로맨티시즘<br />
+                        <span class="season-highlight">#Ancora #SabatoDeSarno #RossoAncora</span>
+                     </p>
+                  </div>
+               </div>
+
+               <!-- LOUIS VUITTON -->
+
+               <div class="brand-gallery">
+                  <img src="./assets/images/Main/BrandsImage/LOUIS VUITTON.png" alt="루이비통" />
+                  <div class="brand-gallery-text">
+                     <h2>LOUIS VUITTON</h2>
+                     <p>
+                        여행의 예술, 그리고 끝없는 혁신의 여정<br />
+                        <span class="season-highlight">#PharrellWilliams #LVoyager #Damier</span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- =================================================================
+         7. Trend Pick Container 
+         ================================================================== -->
+         <section class="trend-pick-container">
+            <div class="section-title">
+               <h2>Trend Pick</h2>
+               <p>드러내지 않아도 느껴지는 기품, 로고리스 디자인과 고급스러운 소재의 아이템들</p>
+            </div>
+            <div class="trend-pick-grid toggle-grid">
+               <!-- JavaScript가 이곳을 채웁니다. -->
+            </div>
+            <div class="view-more-wrapper">
+               <button type="button" id="trend-pick-btn" class="view-more-btn" disabled>View More</button>
+            </div>
+         </section>
+
+         <!-- =================================================================
+         8. Review Container 
+         ================================================================== -->
+         <section class="review-container">
+            <div class="review-bg"></div>
+            <div class="review-content">
+               <h2 class="review-title">Share Your Style</h2>
+               <p class="review-subtitle">
+                  #THESELECT 와 함께 당신의 스타일을 공유해주세요.<br />
+                  매주 베스트 리뷰어를 선정하여 특별한 혜택을 드립니다.
+               </p>
+               <div class="review-cta-wrapper">
+                  <a href="/community" class="cta-button">More Reviews & Events</a>
+               </div>
+            </div>
+         </section>
+      </div>
+      <!-- .container 끝 -->
+      <!-- 전체 공통 스크립트 -->
+      <script type="module" src="./js/main.js" defer></script>
+   </body>
+</html>
