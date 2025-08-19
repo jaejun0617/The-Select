@@ -1,9 +1,9 @@
 // product-list.js
 
 // utils.js 파일에서 fetchProducts와 formatCurrency 함수를 가져옵니다.
-import { fetchProducts, formatCurrency } from './utils.js';
+import { fetchProducts, formatCurrency } from '../utils.js';
 // modal.js 파일에서 필요한 모달 관련 함수들을 가져옵니다.
-import { openModal, renderModalContent, initializeModal } from './modal.js';
+import { openModal, renderModalContent, initializeModal } from '../modal.js';
 
 document.addEventListener('DOMContentLoaded', function () {
    // --- 1. STATE MANAGEMENT ---
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             return `
                 <div class="product-card">
-                    <a href="/product-detail.html?id=${product.id}">
+                    <a href="../pages/product-detail.html?id=${product.id}">
                         <div class="product-image">
                             <img src="${product.image}" alt="${product.name}">
                         </div>
