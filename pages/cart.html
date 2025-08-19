@@ -6,56 +6,45 @@
       <title>THE SELECT | 장바구니</title>
 
       <!-- 브라우저 기본 스타일 초기화 -->
-      <link rel="stylesheet" href="../css/reset.css" />
+      <link rel="stylesheet" href="/The-Select/css/reset.css" />
       <!-- CSS 변수 -->
-      <link rel="stylesheet" href="../css/variables.css" />
+      <link rel="stylesheet" href="/The-Select/css/variables.css" />
       <!-- 공통 스타일 (헤더, 푸터, 전반적인 레이아웃) -->
-      <link rel="stylesheet" href="../css/common.css" />
+      <link rel="stylesheet" href="/The-Select/css/common.css" />
       <!-- 레이아웃 관련 스타일 (Flex, Grid 등) -->
-      <link rel="stylesheet" href="../css/layout.css" />
+      <link rel="stylesheet" href="/The-Select/css/layout.css" />
       <!-- 카드, 버튼, 모달 등 UI 컴포넌트 스타일 -->
-      <link rel="stylesheet" href="../css/components.css" />
+      <link rel="stylesheet" href="/The-Select/css/components.css" />
    </head>
    <body>
-      <!-- 전체 페이지를 감싸는 컨테이너 -->
       <div class="container">
-         <!-- =================================================================
-         1. Header Section (메인 페이지와 동일하게 유지)
-         ================================================================== -->
          <header>
-            <!-- Logo -->
             <div class="logo">
-               <a href="/index.html">
-                  <img src="../assets/images/Main/logo/fff_logo.png" alt="THE SELECT 로고" />
+               <a href="/The-Select/index.html">
+                  <img src="/The-Select/assets/images/Main/logo/fff_logo.png" alt="THE SELECT 로고" />
                </a>
             </div>
-            <!-- Navigation Menu -->
             <nav>
                <ul class="header-menus">
-                  <li><a href="../pages/product-list.html">BRAND</a></li>
-                  <li><a href="../pages/product-list.html?category=Bags" data-category="Bags">BAG</a></li>
-                  <li><a href="../pages/product-list.html?category=Accessories" data-category="Accessories">ACC</a></li>
-                  <li><a href="../pages/product-list.html?category=Shoes" data-category="Shoes">SHOES</a></li>
+                  <li><a href="/The-Select/pages/product-list.html">BRAND</a></li>
+                  <li><a href="/The-Select/pages/product-list.html?category=Bags" data-category="Bags">BAG</a></li>
+                  <li><a href="/The-Select/pages/product-list.html?category=Accessories" data-category="Accessories">ACC</a></li>
+                  <li><a href="/The-Select/pages/product-list.html?category=Shoes" data-category="Shoes">SHOES</a></li>
                   <li><a href="#">Review & Event</a></li>
                </ul>
             </nav>
-            <!-- Header Icons -->
             <div class="header-icons">
-               <div class="icon icon-search"><img src="../assets/icons/search.svg" alt="검색" /></div>
+               <div class="icon icon-search"><img src="/The-Select/assets/icons/search.svg" alt="검색" /></div>
 
                <div class="icon icon-cart">
-                  <a href="./cart.html"><img src="../assets/icons/cart.svg" alt="장바구니" /></a>
+                  <a href="/The-Select/pages/cart.html"><img src="/The-Select/assets/icons/cart.svg" alt="장바구니" /></a>
                </div>
-               <div class="icon m-btn"><img src="../assets/icons/menubar.svg" alt="메뉴 열기" /></div>
+               <div class="icon m-btn"><img src="/The-Select/assets/icons/menubar.svg" alt="메뉴 열기" /></div>
             </div>
          </header>
 
-         <!-- =================================================================
-         2. Main Content - Cart Section
-         ================================================================== -->
          <main>
             <div class="cart-container">
-               <!-- 장바구니 상품 목록 -->
                <div id="cart-items-list">
                   <p class="empty-cart-message">장바구니가 비어있습니다.</p>
                </div>
@@ -67,12 +56,7 @@
                </div>
             </div>
          </main>
-
-         <!-- =================================================================
-         3. Footer Section
-         ================================================================== -->
       </div>
-      <!-- .container 끝 -->
 
       <!-- Swiper JS (CDN) -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -80,8 +64,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
-      <!-- JS 파일 로드 순서 중요! -->
-      <!-- 1. cart.js (모듈) - 전역 함수 등록 및 DOMContentLoaded 초기화 -->
-      <script type="module" src="../js/cart.js"></script>
+      <!-- JS 파일 로드 -->
+      <script type="module" src="/The-Select/js/cart.js"></script>
    </body>
 </html>
