@@ -112,7 +112,7 @@ function setupCartEventDelegation() {
 
 // --- 장바구니 조작 ---
 export function addProductToCart(product) {
-   const productSize = product.size || ''; // size 없는 경우 빈 문자열
+   const productSize = product.size || ''; 
    const cartItems = getCartItems();
 
    const index = cartItems.findIndex(item => item.id == product.id && item.size == productSize);
