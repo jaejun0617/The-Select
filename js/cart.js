@@ -1,5 +1,5 @@
 // js/cart.js
-import { formatCurrency } from './utils.js';
+import { formatCurrency } from '../utils.js';
 
 const cartItemsList = document.getElementById('cart-items-list');
 const cartTotalPrice = document.getElementById('cart-total-price');
