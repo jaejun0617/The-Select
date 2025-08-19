@@ -1,10 +1,10 @@
-# 🛒 THE SELECT SHOP – 반응형 쇼핑몰 웹사이트 제작 프로젝트
+# 🛒 THE SELECT SHOP – 반응형 쇼핑몰 웹사이트 프로젝트
 
 https://jaejun0617.github.io/The-Select/index.html
 
 ## 🗓 기간
 
-2025년 8월 14일 ~ 2025년 8월 20일
+2025년 8월 14일 ~ 2025년 8월 20일 (계속 프로젝트 관리를 할것)
 
 ## 📝 최종 목표
 
