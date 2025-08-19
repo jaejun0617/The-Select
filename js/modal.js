@@ -101,7 +101,7 @@ export function renderModalContent(product, formatCurrencyFunc) {
          
          <div class="modal-actions">
             <button class="btn-buy">
-               <a href="/pages/cart.html">Buy Now</a>
+               <a href="../pages/cart.html">Buy Now</a>
             </button>
             <button class="btn-add-to-cart" data-id="${product.id}">
                장바구니 담기
