@@ -3,64 +3,62 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>THE SELECT | 메인페이지</title>
+
       <!-- 브라우저 기본 스타일 초기화 -->
       <link rel="stylesheet" href="./css/reset.css" />
       <!-- CSS 변수 -->
       <link rel="stylesheet" href="./css/variables.css" />
-      <!-- 공통 스타일(body, h1~h6, p, 헤더/푸터 등 전역 적용 + 클래스별 스타) -->
+      <!-- 공통 스타일 (헤더, 푸터, 전반적인 레이아웃) -->
       <link rel="stylesheet" href="./css/common.css" />
-      <!-- 레이아웃 관련 스타일-->
+      <!-- 레이아웃 관련 스타일 (Flex, Grid 등) -->
       <link rel="stylesheet" href="./css/layout.css" />
-      <!-- 카드 버튼 모달 등 UI 컴포넌트 스타일 -->
+      <!-- 카드, 버튼, 모달 등 UI 컴포넌트 스타일 -->
       <link rel="stylesheet" href="./css/components.css" />
-      <!-- GSAP 라이브러리 추가 -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
-      <title>THE SELECT</title>
+
+      <!-- Swiper CSS (상품 슬라이더) -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <!-- GSAP 라이브러리 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
    </head>
    <body>
-      <!-- 전체 컨테이너 -->
+      <!-- 전체 페이지를 감싸는 컨테이너 -->
       <div class="container">
          <!-- =================================================================
-         1. Header
+         1. Header Section
          ================================================================== -->
          <header>
             <!-- Logo -->
             <div class="logo">
                <a href="#">
+                  <!-- {/* 루트 페이지로 이동 */} -->
                   <img src="./assets/images/Main/logo/fff_logo.png" alt="THE SELECT 로고" />
                </a>
             </div>
-            <!-- Navigation -->
+            <!-- Navigation Menu -->
             <nav>
                <ul class="header-menus">
-                  <li><a href="./product-list.html">BRAND</a></li>
-                  <li><a href="#">WOMAN</a></li>
-                  <li><a href="#">MAN</a></li>
-                  <li><a href="#">BAG</a></li>
-                  <li><a href="#">ACC</a></li>
-                  <li><a href="#">SHOES</a></li>
+                  <li><a href="../pages/product-list.html">BRAND</a></li>
+                  <li><a href="../pages/product-list.html?category=Bags" data-category="Bags">BAG</a></li>
+                  <li><a href="../pages/product-list.html?category=Accessories" data-category="Accessories">ACC</a></li>
+                  <li><a href="../pages/product-list.html?category=Shoes" data-category="Shoes">SHOES</a></li>
+                  <li><a href="#">Review & Event</a></li>
                </ul>
             </nav>
-            <!-- Header icons  -->
+            <!-- Header Icons (Search, Login, Favorite, Cart) -->
             <div class="header-icons">
                <div class="icon icon-search">
                   <img src="./assets/icons/search.svg" alt="검색" />
                </div>
-               <div class="icon icon-login">
-                  <a href="./login.html">
-                     <img src="./assets/icons/lock.svg" alt="로그인" />
-                  </a>
-               </div>
-               <div class="icon icon-favorite">
-                  <img src="./assets/icons/favorite.svg" alt="찜하기" />
-               </div>
+
                <div class="icon icon-cart">
-                  <a href="./cart.html">
+                  <a href="/pages/cart.html">
                      <img src="./assets/icons/cart.svg" alt="장바구니" />
                   </a>
                </div>
                <div class="icon m-btn">
+                  <!-- {/* 모바일 메뉴 버튼 */} -->
                   <img src="./assets/icons/menubar.svg" alt="메뉴 열기" />
                </div>
             </div>
@@ -71,41 +69,62 @@
          ================================================================== -->
          <main>
             <div class="main-container">
-               <div class="main-bg-text">
-                  <div class="section-title">
-                     <h2>코트의 계절</h2>
-                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, dicta numquam? Velit, eum?
-                        Itaque recusandae corporis debitis eligendi ipsam a pariatur aut quasi maxime fuga, iste ex enim
-                        magni ad!
-                     </p>
-                  </div>
-                  <div class="main-brand">
-                     <h2>Max Mara</h2>
-                  </div>
-               </div>
                <div class="main-slider-container">
-                  <div class="main-slider">
-                     <img src="./assets/images/Main/Main-slider/banner_visual_maxmara.png" alt="막스마라 메인 배너" />
+                  <!-- Swiper: 상품 슬라이더 -->
+                  <div class="swiper mySwiper">
+                     <div class="swiper-wrapper">
+                        <!-- Slide 1: Max Mara -->
+                        <div class="swiper-slide">
+                           <img src="./assets/images/Main/Main-slider/banner_visual_maxmara.png" />
+                           <div class="slider-text">
+                              <!-- {/* 슬라이드 텍스트 */} -->
+                              <h2>Max Mara</h2>
+                              <p>시간을 초월하는 우아함, 당신의 모든 순간을 빛나게 할 단 하나의 코트.</p>
+                           </div>
+                        </div>
+
+                        <!-- Slide 2: Prada -->
+                        <div class="swiper-slide">
+                           <img src="./assets/images/Main/Main-slider/banner_visual_prada.png" />
+                           <div class="slider-text">
+                              <h2>Prada</h2>
+                              <p>클래식의 재해석, 시대를 앞서가는 가장 현대적인 미학.</p>
+                           </div>
+                        </div>
+
+                        <!-- Slide 3: Moncler -->
+                        <div class="swiper-slide">
+                           <img src="./assets/images/Main/Main-slider/banner_visual_moncler.png" />
+                           <div class="slider-text">
+                              <h2>Moncler</h2>
+                              <p>눈 덮인 정상에서 도시의 거리까지, 기능과 스타일을 아우르는 완벽한 실루엣.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- 슬라이더 네비게이션 버튼 -->
+                     <div class="swiper-button-next"></div>
+                     <div class="swiper-button-prev"></div>
+                     <!-- 슬라이더 페이지네이션 -->
+                     <div class="swiper-pagination"></div>
                   </div>
                </div>
             </div>
          </main>
 
          <!-- =================================================================
-         3. Category Container 
+         3. Category Container
          ================================================================== -->
          <section class="category-container">
             <div class="section-title">
+               <!-- {/* 섹션 제목 */} -->
                <h2>Complete Your Style</h2>
                <p>머리부터 발끝까지, 당신의 스타일을 완성할 마지막 조각을 발견하세요.</p>
             </div>
             <div class="category-grid-content">
+               <!-- {/* 카테고리 그리드 */} -->
                <div class="category clothing">
-                  <img src="./assets/images/Main/Category/category_woman_hover.png" alt="여성 옷" />
-               </div>
-               <div class="category clothing">
-                  <img src="./assets/images/Main/Category/category_man_hover.png" alt="남성 옷" />
+                  <!-- {/* 카테고리 카드 */} -->
+                  <img src="./assets/images/Brands/LouisVuitton/Clothing/lv-shirts-01.jpg" alt="카테고리 옷" />
                </div>
                <div class="category bags">
                   <img src="./assets/images/Main/Category/category_bag_hover.png" alt="카테고리 가방" />
@@ -124,23 +143,27 @@
          ================================================================== -->
          <section class="new-arrivals-container">
             <div class="section-title">
+               <!-- {/* 섹션 제목 */} -->
                <h2>New arrivals</h2>
                <p>가장 먼저 만나는 새로운 시즌의 아이템</p>
             </div>
             <div class="new-arrivals-grid toggle-grid">
-               <!-- JavaScript가 이곳을 채웁니다. -->
+               <!-- json -->
             </div>
             <div class="view-more-wrapper">
+               <!-- {/* '더보기' 버튼 감싸는 요소 */} -->
                <button type="button" id="new-arrivals-btn" class="view-more-btn" disabled>View More</button>
             </div>
          </section>
 
          <!-- =================================================================
-         5. Welcome (쿠폰) 
+         5. Welcome (쿠폰) Section
          ================================================================== -->
          <section class="welcome-container">
             <div class="welcome-bg"></div>
+            <!-- {/* Parallax 배경 */} -->
             <div class="welcome-content">
+               <!-- {/* 텍스트 및 CTA */}  -->
                <div class="welcome-icon">
                   <img src="./assets/icons/giftbox.png" alt="선물 상자 아이콘" />
                </div>
@@ -156,18 +179,20 @@
          </section>
 
          <!-- =================================================================
-         6. Brands Container 
+         6. Brands Container
          ================================================================== -->
          <section class="brand-container">
             <div class="section-title">
+               <!-- {/* 섹션 제목 */} -->
                <h2 class="text-center">Our Curated Brands</h2>
                <p>시대를 초월하는 가치와 동시대적 트렌드를 이끄는 브랜드를 만나보세요.</p>
             </div>
             <div class="brand-flex-content">
-               <!-- CHANEL -->
+               <!-- {/* 브랜드 갤러리 flex 컨테이너 */} {/* CHANEL */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/CHANEL.png" alt="샤넬" />
                   <div class="brand-gallery-text">
+                     <!-- {/* 브랜드 텍스트 오버레이 */} -->
                      <h2>CHANEL</h2>
                      <p>
                         꿈과 감성, 변치 않는 클래식의 아이콘<br />
@@ -176,7 +201,7 @@
                   </div>
                </div>
 
-               <!-- BOTTEGA VENETA -->
+               <!-- {/* BOTTEGA VENETA */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/BOTTECG VENETA.png" alt="보테가 베네타" />
                   <div class="brand-gallery-text">
@@ -188,8 +213,7 @@
                   </div>
                </div>
 
-               <!-- Miu Miu -->
-
+               <!-- {/* Miu Miu */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/Miu Miu .png" alt="미우미우" />
                   <div class="brand-gallery-text">
@@ -201,8 +225,7 @@
                   </div>
                </div>
 
-               <!-- SAINT LAURENT -->
-
+               <!-- {/* SAINT LAURENT */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/SAINT LAURENT.png" alt="생로랑" />
                   <div class="brand-gallery-text">
@@ -214,8 +237,7 @@
                   </div>
                </div>
 
-               <!-- BALENCIAGA -->
-
+               <!-- {/* BALENCIAGA */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/BALENCIAGA.png" alt="발렌시아가" />
                   <div class="brand-gallery-text">
@@ -227,8 +249,7 @@
                   </div>
                </div>
 
-               <!-- GUCCI -->
-
+               <!-- {/* GUCCI */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/CUCCI.png" alt="구찌" />
                   <div class="brand-gallery-text">
@@ -240,8 +261,7 @@
                   </div>
                </div>
 
-               <!-- LOUIS VUITTON -->
-
+               <!-- {/* LOUIS VUITTON */} -->
                <div class="brand-gallery">
                   <img src="./assets/images/Main/BrandsImage/LOUIS VUITTON.png" alt="루이비통" />
                   <div class="brand-gallery-text">
@@ -256,27 +276,31 @@
          </section>
 
          <!-- =================================================================
-         7. Trend Pick Container 
+         7. Trend Pick Container
          ================================================================== -->
          <section class="trend-pick-container">
             <div class="section-title">
+               <!-- {/* 섹션 제목 */} -->
                <h2>Trend Pick</h2>
                <p>드러내지 않아도 느껴지는 기품, 로고리스 디자인과 고급스러운 소재의 아이템들</p>
             </div>
             <div class="trend-pick-grid toggle-grid">
-               <!-- JavaScript가 이곳을 채웁니다. -->
+               <!-- Json  -->
             </div>
             <div class="view-more-wrapper">
+               <!-- {/* '더보기' 버튼 감싸는 요소 */} -->
                <button type="button" id="trend-pick-btn" class="view-more-btn" disabled>View More</button>
             </div>
          </section>
 
          <!-- =================================================================
-         8. Review Container 
+         8. Review Container
          ================================================================== -->
          <section class="review-container">
             <div class="review-bg"></div>
+            <!-- {/* Parallax 배경 */} -->
             <div class="review-content">
+               <!-- {/* 텍스트 및 CTA */} -->
                <h2 class="review-title">Share Your Style</h2>
                <p class="review-subtitle">
                   #THESELECT 와 함께 당신의 스타일을 공유해주세요.<br />
@@ -287,9 +311,82 @@
                </div>
             </div>
          </section>
+
+         <!-- =================================================================
+         9. Footer Section
+         ================================================================== -->
+         <footer>
+            <div class="footer-header-title">
+               <!-- {/* 푸터 상단 제목 및 연락처 */} -->
+               <h2>THE SELECT</h2>
+               <h3>1588-0000</h3>
+               <ul>
+                  <!-- {/* 소셜 미디어 링크 */} -->
+                  <li>
+                     <a href="#">
+                        <img src="./assets/icons/instagram.png" alt="인스타그램" />
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="./assets/icons/tw.png" alt="트위터" />
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <img src="./assets/icons/youtube.png" alt="유튜브" />
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer-header-menu">
+               <!-- {/* 푸터 메뉴 */} -->
+               <ul>
+                  <li><a href="#">이용약관</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">쿠폰조회</a></li>
+               </ul>
+               <ul>
+                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#">장바구니</a></li>
+                  <li><a href="#">적립금 조회</a></li>
+               </ul>
+            </div>
+            <div class="footer-info">
+               <!-- {/* 회사 정보 */} -->
+               <p>상호명. 주식회사 THE SELECT</p>
+               <p>고객센터 1588-0000 ㅣ 이메일. shinjaejun@gamil.com</p>
+               <p>사업자등록번호. 123-45-67890 [사업자정보확인] ㅣ 통신판매업신고. 2025-경기-0000호</p>
+               <p>주소. 12345 경기 고양시 일산서구 강선로 000 3층, 상호명. 주식회사 THE SELECT</p>
+               <p>계좌안내. 대한민국 123456-78-0000000 ㅣ 예금주 : 주식회사 THE SELECT</p>
+            </div>
+            <div class="copyright">
+               <!-- {/* 저작권 정보 */} -->
+               <p>© 2025 Jaejun. All rights reserved.</p>
+               <p>본 포트폴리오는 개인 작업물 및 학습 결과물로, 상업적 용도로 사용되지 않습니다.</p>
+            </div>
+         </footer>
+
+         <!-- Product Detail Modal Structure -->
+         <div id="productDetailModal" class="modal">
+            <div class="modal-content">
+               <span id="closeModal" class="close-modal">&times;</span>
+               <!-- 상품 상세 정보는 JS에서 동적으로 채워집니다 -->
+            </div>
+         </div>
+         <!-- End Product Detail Modal -->
       </div>
       <!-- .container 끝 -->
-      <!-- 전체 공통 스크립트 -->
-      <script type="module" src="./js/main.js" defer></script>
+
+      <!-- Swiper JS (CDN) -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- 메인 페이지 공통 스크립트 -->
+      <!-- JS 파일 로드 순서 중요! -->
+      <!-- 장바구니 관련 기능을 가진 cart.js를 먼저 로드 -->
+      <script type="module" src="../js/cart.js"></script>
+      <!-- 모달 관련 기능을 가진 modal.js를 나중에 로드 -->
+      <script type="module" src="../js/modal.js"></script>
+      <script type="module" src="./js/main.js"></script>
    </body>
 </html>
