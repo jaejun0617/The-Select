@@ -1,27 +1,22 @@
 // product-list.js
 
-// utils.js 파일에서 fetchProducts와 formatCurrency 함수를 가져옵니다.
-import { fetchProducts, formatCurrency } from '../utils.js';
-// modal.js 파일에서 필요한 모달 관련 함수들을 가져옵니다.
-import { openModal, renderModalContent, initializeModal } from '../modal.js';
+// 절대 경로로 import
+import { fetchProducts, formatCurrency } from '/The-Select/js/utils.js';
+import { openModal, renderModalContent, initializeModal } from '/The-Select/js/modal.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-   // --- 1. STATE MANAGEMENT ---
    let allProducts = [];
    let currentScrollY = 0;
-
    let currentPage = 1;
    const productsPerPage = 12;
    let totalPages = 0;
 
-   // --- 2. ELEMENT SELECTORS ---
    const productGrid = document.querySelector('.product-list-grid');
    const filterLists = document.querySelectorAll('.brand-list, .category-list, .size-list');
    const filterToggles = document.querySelectorAll('.js-filter-toggle');
    const headerNavLinks = document.querySelectorAll('header nav ul li a');
    const paginationContainer = document.querySelector('.pagination-container');
 
-   // --- 3. EVENT LISTENERS ---
    filterToggles.forEach(toggle => {
       toggle.addEventListener('click', () => {
          const target = toggle.nextElementSibling;
@@ -36,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
          event.preventDefault();
 
          currentScrollY = window.scrollY;
-
          const clickedListItem = event.target.parentElement;
          const currentList = clickedListItem.parentElement;
          currentList.querySelectorAll('li').forEach(item => item.classList.remove('active'));
@@ -50,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
    headerNavLinks.forEach(link => {
       if (link.getAttribute('href') === '#') {
          link.addEventListener('click', event => event.preventDefault());
-      } else if (link.getAttribute('href')?.startsWith('product-list.html')) {
+      } else if (link.getAttribute('href')?.includes('product-list.html')) {
          link.addEventListener('click', event => {
             event.preventDefault();
             currentScrollY = window.scrollY;
@@ -60,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const brandFromLink = urlParams.get('brand') || 'all';
             const sizeFromLink = urlParams.get('size') || 'all';
 
-            // 좌측 필터 메뉴 업데이트
             document.querySelectorAll('.category-list li a').forEach(catLink => {
                if (catLink.dataset.category === categoryFromLink) {
                   catLink.closest('ul').querySelectorAll('li').forEach(li => li.classList.remove('active'));
@@ -82,13 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             currentPage = 1;
             updateProducts();
-
             setTimeout(() => window.scrollTo(0, currentScrollY), 0);
          });
       }
    });
 
-   // --- 4. CORE LOGIC ---
    function updateProducts() {
       const selectedBrand = document.querySelector('.brand-list li.active a')?.dataset.brand || 'all';
       const selectedCategory = document.querySelector('.category-list li.active a')?.dataset.category || 'all';
@@ -150,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
          return `
             <div class="product-card">
-               <a href="./product-detail.html?id=${product.id}">
+               <a href="/The-Select/pages/product-detail.html?id=${product.id}">
                   <div class="product-image"><img src="${product.image}" alt="${product.name}"></div>
                   <div class="product-info">
                      <span class="product-brand">${product.brand}</span>
@@ -176,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       paginationHtml += `<button class="pagination-btn next-btn" ${currentPage === totalPages ? 'disabled' : ''}>Next &raquo;</button>`;
-
       paginationContainer.innerHTML = paginationHtml;
       addPaginationEventListeners();
    }
@@ -236,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    async function initializeProductListPage() {
       try {
-         const products = await fetchProducts();
+         const products = await fetchProducts('/The-Select/data/products.json'); // 절대경로
          if (products) allProducts = products;
          else throw new Error('상품 데이터를 불러오지 못했습니다.');
 
@@ -248,7 +238,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    }
 
-   // --- 모달 ---
    productGrid.addEventListener('click', async event => {
       const productCardLink = event.target.closest('.product-card a');
       if (!productCardLink) return;
