@@ -145,15 +145,10 @@ export function renderModalContent(product, formatCurrencyFunc) {
 }
 
 // --- 공통 상품 카드 클릭 이벤트 연결 ---
-// product-list.js 파일에서 직접 모달 열기 로직을 처리하는 것으로 간주하고,
-// 이 함수는 export만 하거나, product-list.js에서 직접 모달 관련 함수를 import하여 사용하도록 합니다.
 export function setupProductCardClickEvents(products, formatCurrencyFunc) {
-   // Product-list.js에서 'productGrid.addEventListener'로 모달 열기 로직을 직접 구현했으므로,
-   // 이 함수는 export만 하거나, product-list.js에서 직접 모달 관련 함수를 import하여 사용합니다.
 }
 
 // --- 초기화 함수 ---
 export function initializeModal() {
    setupModalCloseOnClickOutside();
-   // setupProductCardClickEvents(products, formatCurrencyFunc); // product-list.js에서 직접 처리
 }
