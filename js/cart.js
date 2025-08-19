@@ -1,5 +1,5 @@
 // js/cart.js
-import { formatCurrency } from '../utils.js';
+import { formatCurrency } from '/The-Select/js/utils.js';
 
 const cartItemsList = document.getElementById('cart-items-list');
 const cartTotalPrice = document.getElementById('cart-total-price');
@@ -163,7 +163,6 @@ function initializeCartPage() {
       });
    }
 
-   // 초기화 버튼 예시
    const clearBtn = document.getElementById('clear-cart-btn');
    if (clearBtn) clearBtn.addEventListener('click', clearCart);
 }
